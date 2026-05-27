@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Basic Meta Tags -->
+    <title>Surat Jobs & Vacancies 2026 | Site4People</title>
+    <meta name="description" content="Find the latest jobs, vacancies, and career opportunities in Surat, Gujarat.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --accent: #d97706;
+            --bg-off-white: #fcfcf9;
+            --text-main: #1a1a1a;
+            --text-light: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-off-white);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Hero Section with Surat Cityscape */
+        .hero {
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* IMAGE: Surat Skyline/Modern Cityscape */
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+                url('https://images.unsplash.com/photo-1595305844720-302450893096?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            background: var(--accent);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto;
+        }
+
+        /* History Cards */
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Market Section */
+        .market-item {
+            margin-bottom: 25px;
+        }
+
+        .market-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .bar-bg {
+            background: #eee;
+            height: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            background: var(--primary);
+            height: 100%;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+        /* Form */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: var(--accent);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Site4People</a>
+                <div class="nav-links">
+                    <a href="#history">History</a>
+                    <a href="#market">Market</a>
+                    <a href="#job-history">Evolution</a>
+                    <a href="#apply">Apply</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="opacity: 1; transform: none;">
+        <div>
+            <span class="badge">Live Vacancies for 2026</span>
+            <h1>Jobs in Surat</h1>
+            <p>Empowering Careers in the Diamond City</p>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <section id="history">
+            <h2 class="section-title">Industrial Heritage</h2>
+            <div class="history-grid">
+                <div class="card">
+                    <!-- IMAGE: Textile Industry (Silk/Fabric) -->
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80&w=600"
+                        alt="Surat Textile Industry" class="card-img">
+                    <h3>The Silk City</h3>
+                    <p>Experience the legacy of Surat's textile giants, from traditional Zari work to modern automated
+                        power looms.</p>
+                </div>
+                <div class="card">
+                    <!-- IMAGE: Diamond Polishing/Diamonds -->
+                    <img src="https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&q=80&w=600"
+                        alt="Diamond Industry Surat" class="card-img">
+                    <h3>The Diamond Hub</h3>
+                    <p>Surat processes 9 out of 10 diamonds in the world. Explore careers in polishing, grading, and
+                        trading.</p>
+                </div>
+                <div class="card">
+                    <!-- IMAGE: Heavy Industry/Engineering -->
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=600"
+                        alt="Surat Infrastructure Engineering" class="card-img">
+                    <h3>Engineering & Power</h3>
+                    <p>Home to Hazira’s industrial belt, offering massive opportunities in petrochemicals and heavy
+                        engineering.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="job-history">
+            <h2 class="section-title">Evolution of Employment</h2>
+            <div class="card"
+                style="display: flex; flex-direction: row; gap: 30px; align-items: center; flex-wrap: wrap; padding: 40px;">
+                <!-- IMAGE: Modern Tech/Office in Surat -->
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600"
+                    alt="Modern Workspace Evolution"
+                    style="border-radius: 12px; width: 100%; max-width: 450px; height: 300px; object-fit: cover;">
+                <div style="flex: 1; min-width: 300px;">
+                    <p style="font-size: 1.1rem; color: #444;">Surat has transitioned from a port-based trading center
+                        to a tech-driven industrial powerhouse. Today, the job market has expanded beyond traditional
+                        sectors to include <strong>E-commerce, Software Development, and Renewable Energy</strong>. Our
+                        platform connects you with this evolving landscape in 2026.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="market">
+            <h2 class="section-title">2026 Job Market Demand</h2>
+            <div class="market-item">
+                <div class="market-label"><span>Diamond Technology (Lab Grown)</span><span>95%</span></div>
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="95%"></div>
+                </div>
+            </div>
+            <div class="market-item">
+                <div class="market-label"><span>Textile Export & Design</span><span>88%</span></div>
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="88%"></div>
+                </div>
+            </div>
+            <div class="market-item">
+                <div class="market-label"><span>IT & Digital Marketing</span><span>78%</span></div>
+                <div class="bar-bg">
+                    <div class="bar-fill" data-width="78%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apply">
+            <h2 class="section-title">Submit Your Profile</h2>
+            <div class="form-container">
+                <form id="vacancy-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="mobile" required placeholder="10 Digit Number">
+                    </div>
+                    <div class="form-group">
+                        <label>Specialization (e.g. Textile, IT, HR)</label>
+                        <input type="text" id="skill-type" required placeholder="Your primary skill">
+                    </div>
+                    <div class="form-group">
+                        <label>Short Experience Summary</label>
+                        <textarea id="about" rows="4" required
+                            placeholder="Tell us about your work history..."></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn">Send My Application</button>
+                </form>
+                <div id="success-msg"
+                    style="display:none; text-align:center; padding: 20px; background: #dcfce7; border-radius: 10px; color: #166534; margin-top:20px;">
+                    <strong>Success!</strong> Your profile has been sent to Surat recruitment partners.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3>Site4People - Surat Career Division</h3>
+            <p>Bridging the gap between talent and industry since 2015.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Surat Jobs Portal. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll & Bar Animation Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const bars = entry.target.querySelectorAll('.bar-fill');
+                    bars.forEach(bar => {
+                        bar.style.width = bar.getAttribute('data-width');
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+        // Form Submission Logic
+        document.getElementById('vacancy-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.opacity = '0';
+            setTimeout(() => {
+                this.style.display = 'none';
+                document.getElementById('success-msg').style.display = 'block';
+            }, 300);
+        });
+    </script>
+</body>
+
+</html>
