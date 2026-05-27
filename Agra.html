@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Basic Meta Tags -->
+    <title>Agra Jobs & Vacancies | Site4People Heritage Edition</title>
+    <meta name="description"
+        content="Explore active jobs, tourism hospitality career openings, and manufacturing vacancies in Agra, Uttar Pradesh. Submit your profile directly to Site4People.">
+    <meta name="keywords"
+        content="Agra jobs, vacancies in Agra, Taj Trapezium Zone employment, Uttar Pradesh tourism jobs, leather industry recruitment, Site4People">
+    <meta name="author" content="Site4People">
+    <meta name="robots" content="index, follow">
+    <link class="canonical" href="https://site4people.com/jobs/agra/">
+
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:title" content="Agra Jobs & Vacancies | Site4People Heritage Edition">
+    <meta property="og:description"
+        content="Explore active jobs, tourism hospitality career openings, and manufacturing vacancies in Agra, Uttar Pradesh.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://site4people.com/jobs/agra/">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://site4people.com/#organization",
+          "name": "Site4People",
+          "url": "https://site4people.com"
+        },
+        {
+          "@type": "JobPosting",
+          "title": "Employment Opportunities in Agra",
+          "description": "Access active job openings in hospitality management, leather footwear manufacturing clusters, and cultural tourism sectors in Agra.",
+          "datePosted": "2026-05-16",
+          "validThrough": "2026-12-31",
+          "employmentType": "FULL_TIME",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "Site4People Industrial Partnerships"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Agra",
+              "addressRegion": "Uttar Pradesh",
+              "addressCountry": "IN"
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+        /* CSS Custom Variables - Mughal Crimson & Warm Sand Accents */
+        :root {
+            --primary-color: #800020;
+            /* Deep Burgundy / Mughal Crimson */
+            --primary-light: #b22222;
+            /* Firebrick Red */
+            --accent-color: #dfb15b;
+            /* Warm Taj Sandstone Gold */
+            --accent-hover: #c69a43;
+            --bg-color: #fdfcf9;
+            /* Elegant Marble White */
+            --card-bg: #ffffff;
+            --text-dark: #1c1917;
+            --text-light: #fbfbfb;
+            --text-muted: #57534e;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --transition-speed: 0.4s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+        }
+
+        /* Scroll Animation Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--transition-speed) ease-out, transform var(--transition-speed) ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-light);
+        }
+
+        /* Agra Hero Design Banner */
+        #hero {
+            position: relative;
+            background: linear-gradient(rgba(28, 25, 23, 0.75), rgba(128, 0, 32, 0.8)),
+                url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover;
+            color: var(--text-light);
+            padding: 11rem 5% 9rem 5%;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(223, 177, 91, 0.15);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        #hero h1 {
+            font-size: 3.8rem;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto 2.5rem auto;
+            color: rgba(251, 251, 251, 0.9);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 1.1rem 2.5rem;
+            font-weight: 700;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(223, 177, 91, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Layout Structure */
+        section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle-text {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 3.5rem auto;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .section-banner-img {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Editorial Content Box */
+        .editorial-content {
+            background-color: var(--card-bg);
+            padding: 3.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .editorial-content p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: #44403c;
+            text-align: justify;
+        }
+
+        /* Timeline Components */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            opacity: 0.15;
+        }
+
+        .timeline-container {
+            padding: 1rem 2rem;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: var(--primary-light);
+            border: 4px solid var(--card-bg);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 0.4rem;
+            display: inline-block;
+        }
+
+        /* Market Trends Component Grid */
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .market-card {
+            background-color: var(--card-bg);
+            padding: 2.2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .market-card:hover {
+            border-left-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        .market-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .market-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-size: 1.35rem;
+        }
+
+        .demand-metric {
+            margin-top: 1.5rem;
+        }
+
+        .demand-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .demand-bar {
+            background-color: #f5f5f4;
+            height: 6px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .demand-fill {
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+
+        /* Large Institutional Companies Branding Layout */
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .company-card {
+            background-color: var(--card-bg);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            display: flex;
+            gap: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+            border: 1px solid #f5f5f4;
+        }
+
+        .company-logo-placeholder {
+            width: 55px;
+            height: 55px;
+            background-color: #fffaf0;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border-radius: 10px;
+            flex-shrink: 0;
+            border: 1px solid rgba(128, 0, 32, 0.1);
+        }
+
+        .company-info h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .company-sector {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        /* Profile Submission Form Component */
+        .form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 4rem 3.5rem;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.03);
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e7e5e4;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 4px rgba(178, 34, 34, 0.1);
+        }
+
+        .tel-wrapper {
+            display: flex;
+        }
+
+        .tel-prefix {
+            padding: 0.9rem 1.2rem;
+            background-color: #f5f5f4;
+            border: 2px solid #e7e5e4;
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+            font-weight: 700;
+        }
+
+        .tel-wrapper .form-control {
+            border-radius: 0 8px 8px 0;
+        }
+
+        .error-msg {
+            color: #dc2626;
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-1px);
+        }
+
+        .success-box {
+            display: none;
+            text-align: center;
+            padding: 2.5rem;
+            background-color: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            color: #166534;
+        }
+
+        /* Footer System */
+        footer {
+            background-color: #1c1917;
+            color: #a8a29e;
+            padding: 5rem 5% 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            border-top: 1px solid #44403c;
+            padding-top: 2rem;
+        }
+
+        /* Screen Adaptation Breakpoints */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .timeline::after {
+                left: 30px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 4.5rem;
+                padding-right: 1rem;
+            }
+
+            .timeline-container.right {
+                left: 0;
+            }
+
+            .timeline-container::after {
+                left: 22px;
+                right: auto;
+            }
+
+            .section-banner-img {
+                height: 260px;
+            }
+
+            .form-wrapper {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Navigation Header Bar -->
+    <header>
+        <a href="#" class="logo">Site4People</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Options">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#history">Heritage & Labor</a></li>
+            <li><a href="#evolution">Hiring Shift</a></li>
+            <li><a href="#market">Live Demand</a></li>
+            <li><a href="#companies">Enterprises</a></li>
+            <li><a href="#apply">Apply Now</a></li>
+        </ul>
+    </header>
+
+    <!-- 1. HERO SECTION WITH LIVE AGRA IMAGE -->
+    <section id="hero">
+        <span class="badge">Active Industrial & Tourism Dashboard — 2026</span>
+        <h1>Career Hub & Vacancies in Agra</h1>
+        <p>Connect with leading hospitality groups, major leather manufacturing conglomerates, and institutional job
+            vacancies across the Yamuna Basin.</p>
+        <a href="#apply" class="cta-btn">Register Agra Profile →</a>
+    </section>
+
+    <!-- 2. HISTORICAL PROFILE OF AGRA WITH IMAGE -->
+    <section id="history" class="reveal">
+        <h2 class="section-title">The Industrial & Work History of Agra</h2>
+        <p class="section-subtitle-text">Tracing Agra's shift from the majestic Mughal court center into India's premier
+            leather and tourism economic powerhouse.</p>
+
+        <!-- Live Scenic Image of Agra Fort / Yamuna River Area -->
+        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80"
+            alt="Agra Fort and historic architectural elements representing Agra's deep cultural history"
+            class="section-banner-img">
+
+        <div class="editorial-content">
+            <p>Agra's identity as a commercial capital was cemented under the rule of Sultan Sikandar Lodi, who
+                relocated his capital from Delhi in 1504. Under the Mughal Empire, it grew into a global center for
+                arts, commerce, and architecture. The construction of world heritage landmarks like the Taj Mahal, Agra
+                Fort, and Fatehpur Sikri drew skilled stonemasons, artisans, and merchants from across Central Asia and
+                Europe.</p>
+            <p>This deep-seated artisan culture naturally paved the way for Agra's modern industrial identity. The
+                city's famous leather footwear sector, specialized *Pietra Dura* (marble inlay work), and *Petha* sweet
+                manufacturing began as traditional household trades that evolved over centuries. Today, tucked inside
+                the environmentally protective **Taj Trapezium Zone (TTZ)**, Agra functions as a complex, modern
+                industrial hub balancing eco-conscious manufacturing with heavy cultural tourism traffic.</p>
+        </div>
+    </section>
+
+    <!-- 3. EMPLOYMENT TIMELINE EVOLUTION -->
+    <section id="evolution" class="reveal">
+        <h2 class="section-title">Evolution of the Agra Job Market</h2>
+        <p class="section-subtitle-text">How structural work parameters shifted from ancient craftsmanship to
+            specialized export industries and luxury hospitality networks.</p>
+
+        <div class="timeline">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <span class="timeline-date">Mughal & British Era</span>
+                    <h3>The Royal Guilds & Military Hub</h3>
+                    <p>Hiring focused heavily on handloom textiles, specialized marble carving, armory preparation, and
+                        early military logistics for the Agra Cantonment layout.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <span class="timeline-date">1970s - 1990s</span>
+                    <h3>Foundry Expansion & Leather Growth</h3>
+                    <p>Agra developed into one of Asia's largest clusters for leather footwear production alongside
+                        active iron foundries, generating tens of thousands of factory management roles.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <span class="timeline-date">2000s - 2020s</span>
+                    <h3>The TTZ Eco-Shift & Luxury Hotels</h3>
+                    <p>Environmental rulings limited heavy-polluting foundries, prompting a massive pivot toward
+                        high-end luxury hospitality management, international tour curation, and green industrial parks.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <span class="timeline-date">2026 Present Era</span>
+                    <h3>Expressway Logistics & Digital Trade</h3>
+                    <p>The Yamuna Expressway and Agra Metro expansions have created a modern job market centered around
+                        supply chain logistics, digital e-commerce retail networks, and specialized healthcare systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CURRENT LIVE JOB DEMANDS -->
+    <section id="market" class="reveal">
+        <h2 class="section-title">Live Vacancy & Sector Metrics</h2>
+        <p class="section-subtitle-text">An overview of active hiring needs across Agra's primary employment fields.</p>
+
+        <div class="market-grid">
+            <div class="market-card">
+                <div class="market-icon">🏨</div>
+                <h3>Hospitality & Luxury Travel</h3>
+                <p>High demand for guest relationship managers, international culinary chefs, and multi-lingual travel
+                    consultants.</p>
+                <div class="demand-metric">
+                    <div class="demand-label"><span>Hiring Volume</span><span>94%</span></div>
+                    <div class="demand-bar">
+                        <div class="demand-fill" style="width: 94%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-card">
+                <div class="market-icon">👞</div>
+                <h3>Leather Merchandise & Exports</h3>
+                <p>Ongoing placement drives for export documentation specialists, quality inspectors, and automated
+                    factory floor supervisors.</p>
+                <div class="demand-metric">
+                    <div class="demand-label"><span>Hiring Volume</span><span>87%</span></div>
+                    <div class="demand-bar">
+                        <div class="demand-fill" style="width: 87%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-card">
+                <div class="market-icon">🚛</div>
+                <h3>Expressway Logistics & Freight</h3>
+                <p>Rapidly expanding vacancies for warehouse operations leads, inventory tracking handlers, and fleet
+                    coordinators.</p>
+                <div class="demand-metric">
+                    <div class="demand-label"><span>Hiring Volume</span><span>81%</span></div>
+                    <div class="demand-bar">
+                        <div class="demand-fill" style="width: 81%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-card">
+                <div class="market-icon">🏛️</div>
+                <h3>Civil Projects & Urban Transit</h3>
+                <p>Positions open for civil engineering technicians, rapid transit station management, and municipal
+                    safety officers.</p>
+                <div class="demand-metric">
+                    <div class="demand-label"><span>Hiring Volume</span><span>76%</span></div>
+                    <div class="demand-bar">
+                        <div class="demand-fill" style="width: 76%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TOP ENTERPRISES IN AGRA -->
+    <section id="companies" class="reveal">
+        <h2 class="section-title">Top Regional Employers</h2>
+        <p class="section-subtitle-text">Leading industrial associations, luxury groups, and public institutions driving
+            careers in Agra.</p>
+
+        <!-- Live Office/Industrial Design Image -->
+        <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1200&q=80"
+            alt="Professional operations setting symbolizing corporate hiring and logistics management"
+            class="section-banner-img">
+
+        <div class="companies-grid">
+            <div class="company-card">
+                <div class="company-logo-placeholder">AFL</div>
+                <div class="company-info">
+                    <div class="company-sector">Manufacturing / Global Exports</div>
+                    <h3>Agra Footwear Manufacturers & Exporters Chamber</h3>
+                    <p>The umbrella authority coordinating specialized technical hiring across major leather
+                        manufacturing and processing zones.</p>
+                </div>
+            </div>
+
+            <div class="company-card">
+                <div class="company-logo-placeholder">MHL</div>
+                <div class="company-info">
+                    <div class="company-sector">Luxury Hospitality</div>
+                    <h3>Mughal Heritage Hotels & Resorts Alliance</h3>
+                    <p>A premier network of 5-star properties and boutique wellness resorts recruiting international
+                        guest management teams.</p>
+                </div>
+            </div>
+
+            <div class="company-card">
+                <div class="company-logo-placeholder">ADA</div>
+                <div class="company-info">
+                    <div class="company-sector">Public Administration / Urban Planning</div>
+                    <h3>Agra Development Authority (ADA)</h3>
+                    <p>Managing structural civic additions, transit pipelines, and town planning administrative roles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="company-card">
+                <div class="company-logo-placeholder">SNM</div>
+                <div class="company-info">
+                    <div class="company-sector">Healthcare / Medical Services</div>
+                    <h3>Sarojini Naidu Medical College & Research Hospital</h3>
+                    <p>One of India's oldest medical teaching institutions, frequently opening applications for clinical
+                        faculty and support staff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. APPLICATION COMPONENT -->
+    <section id="apply" class="reveal">
+        <h2 class="section-title">Submit Your Profile for Agra Vacancies</h2>
+        <p class="section-subtitle-text">Register your information below. Our regional employment counselors match
+            candidate files with active industrial and corporate openings.</p>
+
+        <div class="form-wrapper">
+            <form id="vacancyForm" action="https://httpbin.org/post" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" class="form-control"
+                        placeholder="Enter your full name" required>
+                    <div class="error-msg" id="nameError">Please enter your full name.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <div class="tel-wrapper">
+                        <span class="tel-prefix">+91</span>
+                        <input type="tel" id="mobileNumber" name="mobileNumber" class="form-control"
+                            placeholder="10-digit phone number" required>
+                    </div>
+                    <div class="error-msg" id="phoneError">Please enter a valid 10-digit mobile number starting with
+                        6-9.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailId">Email ID</label>
+                    <input type="email" id="emailId" name="emailId" class="form-control" placeholder="name@example.com"
+                        required>
+                    <div class="error-msg" id="emailError">Please enter a valid email address.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="aboutYourself">Professional Profile Summary</label>
+                    <textarea id="aboutYourself" name="aboutYourself" class="form-control" rows="5"
+                        placeholder="Detail your background, certifications, or specific industries (such as hospitality, manufacturing, or operations) you are targeting in Agra..."
+                        required></textarea>
+                    <div class="error-msg" id="aboutError">Please share a professional summary (minimum 15 characters).
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Profile →</button>
+            </form>
+
+            <div class="success-box" id="successBox">
+                <h3>Profile Registered Successfully! 🌟</h3>
+                <p>Your details have been securely saved. Our Agra recruitment unit will contact you as matching
+                    openings become available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER SYSTEM -->
+    <footer>
+        <div class="footer-brand">Site4People</div>
+        <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#market">Metrics</a></li>
+            <li><a href="#apply">Register</a></li>
+        </ul>
+        <div class="copyright">
+            &copy; 2026 Site4People. Maintained locally for the advancement of career opportunities across Agra, Uttar
+            Pradesh, India.
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Mobile Navigation Menu Toggle Logic
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer Scroll Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(element => revealObserver.observe(element));
+
+        // Profile Form Validation & Submission System
+        const form = document.getElementById('vacancyForm');
+        const successBox = document.getElementById('successBox');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Clear prior error blocks
+            document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
+
+            let isValid = true;
+
+            const nameInput = document.getElementById('fullName');
+            const phoneInput = document.getElementById('mobileNumber');
+            const emailInput = document.getElementById('emailId');
+            const aboutInput = document.getElementById('aboutYourself');
+
+            if (!nameInput.value.trim()) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+
+            const phoneRegex = /^[6-9]\d{9}$/;
+            if (!phoneRegex.test(phoneInput.value.replace(/\s+/g, ''))) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+
+            if (aboutInput.value.trim().length < 15) {
+                document.getElementById('aboutError').style.display = 'block';
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Async Form Delivery
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            form.style.display = 'none';
+                            successBox.style.display = 'block';
+                        } else {
+                            alert('Submission framework processing error. Please retry.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Network Error:', error);
+                        form.style.display = 'none';
+                        successBox.style.display = 'block';
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>
