@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Devbhumi Dwarka Jobs & Vacancies 2026 | Site4People</title>
+    <meta name="description"
+        content="Explore career opportunities in Devbhumi Dwarka, Gujarat. Find jobs in Marine chemicals, Wind energy, Dwarkadhish Temple tourism, and Okha Port.">
+    <meta name="keywords"
+        content="Devbhumi Dwarka jobs, Khambhalia vacancies, Okha port jobs, Dwarka tourism careers, Gujarat marine industry, Site4People Dwarka">
+    <meta name="author" content="Site4People">
+
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Devbhumi Dwarka, Gujarat, India">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
+
+        :root {
+            --primary: #075985;
+            /* Coastal Blue */
+            --accent: #f59e0b;
+            /* Golden for Dwarka's heritage */
+            --bg-off-white: #f8fafc;
+            --text-dark: #0f172a;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section for Devbhumi Dwarka */
+        .hero {
+            padding: 200px 0 120px;
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(7, 89, 133, 0.8)),
+                url('https://images.unsplash.com/photo-1623945410153-605a9630718d?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .line {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 20px auto;
+        }
+
+        /* District Comparison / Gallery */
+        .district-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .district-img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 350px;
+        }
+
+        .district-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .district-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border-top: 4px solid transparent;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--primary);
+            padding: 50px;
+            border-radius: 20px;
+            color: var(--white);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: white;
+            outline: none;
+        }
+
+        option {
+            background: var(--primary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #fff;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .district-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Site4People</a>
+                <div class="nav-links"><a href="#apply">Register Profile</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero visible" style="opacity:1; transform:none;">
+            <div class="container">
+                <span class="badge">Devbhumi Dwarka District Portal</span>
+                <h1>Marine, Power & Heritage Careers</h1>
+                <p>Opportunities in Khambhalia, Okha, Dwarka, and the Coastal Industrial Belts of Gujarat</p>
+            </div>
+        </section>
+
+        <section id="dwarka-showcase" class="container">
+            <div class="section-title">
+                <h2>Gateway to the Blue Economy</h2>
+                <div class="line"></div>
+            </div>
+            <div class="district-grid">
+                <div class="district-img">
+                    <img src="https://images.unsplash.com/photo-1618215510619-3543d7890786?auto=format&fit=crop&q=80&w=800"
+                        alt="Dwarka Coastal Industry">
+                </div>
+                <div class="district-img">
+                    <img src="https://images.unsplash.com/photo-1623945410153-605a9630718d?auto=format&fit=crop&q=80&w=800"
+                        alt="Dwarka Heritage Tourism">
+                </div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Marine Chemicals & Salt</h3>
+                    <p>Devbhumi Dwarka is a leader in marine chemical production. High demand for Chemical Engineers,
+                        Plant Operators, and Logistics Managers in the salt and bromine sectors.</p>
+                </div>
+                <div class="card">
+                    <h3>Renewable Energy (Wind)</h3>
+                    <p>The coastal winds make this a hub for Wind Power. Hiring for Wind Turbine Technicians,
+                        Maintenance Engineers, and Electrical Supervisors.</p>
+                </div>
+                <div class="card">
+                    <h3>Pilgrimage Tourism</h3>
+                    <p>Home to the <strong>Dwarkadhish Temple</strong>. Opportunities in Hospitality, Travel Management,
+                        and Retail Operations for one of India's top spiritual destinations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="apply" class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 20px;">Apply for Jobs in Dwarka</h2>
+                <form id="vacancyForm">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+
+                    <label style="display:block; margin-top:15px;">Mobile Number</label>
+                    <input type="tel" id="phone" placeholder="9876543210" pattern="[0-9]{10}" required>
+
+                    <label style="display:block; margin-top:15px;">Target Industry</label>
+                    <select id="industry" required>
+                        <option value="">Select an Industry...</option>
+                        <option value="Marine">Marine Chemicals / Salt Works</option>
+                        <option value="Wind">Wind / Renewable Energy</option>
+                        <option value="Tourism">Pilgrimage Tourism / Hospitality</option>
+                        <option value="Port">Okha Port / Logistics</option>
+                        <option value="Other">Other Category</option>
+                    </select>
+
+                    <label style="display:block; margin-top:15px;">Professional Summary</label>
+                    <textarea id="about" rows="4" placeholder="Briefly describe your experience..." required></textarea>
+
+                    <button type="submit" class="submit-btn">Submit Application →</button>
+                    <div id="success-msg"
+                        style="display:none; text-align:center; padding:15px; color:#f59e0b; background:rgba(245,158,11,0.1); border-radius:6px; margin-top:20px; font-weight:bold; border: 1px solid #f59e0b;">
+                        Application submitted successfully! Our local team will review your profile.</div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <span class="logo" style="color: white; margin-bottom: 10px; display: block;">Site4People</span>
+            <p>&copy; 2026 Site4People. Connecting talent with opportunity in Devbhumi Dwarka, Gujarat.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section:not(.hero)');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            sections.forEach(section => observer.observe(section));
+
+            const form = document.getElementById('vacancyForm');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const btn = form.querySelector('.submit-btn');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = 'Submitting...';
+                    btn.disabled = true;
+
+                    setTimeout(() => {
+                        form.reset();
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        document.getElementById('success-msg').style.display = 'block';
+                        setTimeout(() => {
+                            document.getElementById('success-msg').style.display = 'none';
+                        }, 5000);
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

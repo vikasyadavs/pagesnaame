@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banaskantha Jobs & Vacancies 2025 | Site4People</title>
+    <meta name="description"
+        content="Explore career opportunities in Banaskantha, Gujarat. Find jobs in Banas Dairy, Potato processing, Marble mining, and Tourism. Apply directly on Site4People.">
+    <meta name="keywords"
+        content="Banaskantha jobs, Palanpur vacancies, Banas Dairy careers, Ambaji jobs, Deesa potato industry, Gujarat dairy jobs, Site4People Banaskantha">
+    <meta name="author" content="Site4People">
+
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Banaskantha, Gujarat, India">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
+
+        :root {
+            --primary: #1e3a8a;
+            /* Deep Navy for trust/industry */
+            --accent: #10b981;
+            /* Emerald for agriculture/growth */
+            --bg-off-white: #f8fafc;
+            --text-dark: #0f172a;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid var(--primary);
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section for Banaskantha */
+        .hero {
+            padding: 200px 0 120px;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(30, 58, 138, 0.8)),
+                url('https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?auto=format&fit=crop&q=80&w=1920');
+            /* Representing green fields and industry */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .line {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 20px auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border-top: 4px solid transparent;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--accent);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--primary);
+            padding: 50px;
+            border-radius: 20px;
+            color: var(--white);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            color: white;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background: #0ea5e9;
+        }
+
+        #success-msg {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid #10b981;
+            color: #10b981;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .form-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Site4People</a>
+                <div class="nav-links"><a href="#apply">Apply Now</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero visible" style="opacity:1; transform:none;">
+            <div class="container">
+                <span class="badge">Banaskantha District Career Portal</span>
+                <h1>Work in the Green Fields & Industries of Banaskantha</h1>
+                <p>Connecting Talent with Opportunities in Dairy, Agriculture, Mining, and Tourism</p>
+            </div>
+        </section>
+
+        <section id="sectors" class="container">
+            <div class="section-title">
+                <h2>Key Employment Sectors</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Dairy & Food Processing</h3>
+                    <p>Banaskantha is home to Banas Dairy, Asia's largest milk producer. It drives massive employment
+                        across milk collection, processing, packaging, veterinary services, and logistics in Palanpur
+                        and beyond.</p>
+                </div>
+                <div class="card">
+                    <h3>Agriculture & Agri-Tech</h3>
+                    <p>The district is the potato capital of Gujarat, especially around Deesa. This fuels significant
+                        job creation in cold storage management, agri-tech startups, irrigation engineering, and export
+                        operations.</p>
+                </div>
+                <div class="card">
+                    <h3>Mining & Minerals</h3>
+                    <p>Banaskantha is rich in minerals, particularly marble and granite around Ambaji. The quarrying and
+                        stone processing sectors provide extensive opportunities for engineers, heavy machinery
+                        operators, and safety managers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="apply" class="container"
+            style="background-color: var(--white); border-radius: 20px; padding: 60px 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+            <div class="section-title">
+                <h2>Join the Banaskantha Workforce</h2>
+                <div class="line"></div>
+            </div>
+            <div class="form-container">
+                <form id="applyForm">
+                    <div style="margin-bottom: 20px;">
+                        <label>Full Name</label>
+                        <input type="text" id="fullname" required placeholder="John Doe">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="phone" required placeholder="9876543210" pattern="[0-9]{10}">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label>Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label>Target Industry</label>
+                        <select id="industry" required
+                            style="width: 100%; padding: 12px; margin-top: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); border-radius: 6px; color: white;">
+                            <option value="" style="color: black;">Select an Industry...</option>
+                            <option value="Dairy" style="color: black;">Dairy & Food Processing</option>
+                            <option value="Agriculture" style="color: black;">Agriculture (Potato/Agri-Tech)</option>
+                            <option value="Mining" style="color: black;">Mining & Minerals (Marble)</option>
+                            <option value="Tourism" style="color: black;">Tourism & Pilgrimage</option>
+                            <option value="Other" style="color: black;">Other Sector</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label>Profile Summary</label>
+                        <textarea id="about" rows="4" required
+                            placeholder="Briefly describe your experience and the role you seek..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Profile</button>
+                    <div id="success-msg">Your application has been received! 🎉</div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Site4People. Dedicated to the workforce of Banaskantha, Gujarat.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for scroll animations
+            const sections = document.querySelectorAll('section:not(.hero)');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => observer.observe(section));
+
+            // Form Submit Logic
+            const form = document.getElementById('applyForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const btn = form.querySelector('.submit-btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Sending...';
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    form.reset();
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    document.getElementById('success-msg').style.display = 'block';
+
+                    setTimeout(() => {
+                        document.getElementById('success-msg').style.display = 'none';
+                    }, 5000);
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gandhinagar Jobs 2026 | Site4People</title>
+    <meta name="description"
+        content="Explore job vacancies in Gandhinagar. Careers in GIFT City, IT, and Government sectors.">
+    <meta name="keywords"
+        content="Gandhinagar jobs, GIFT City careers, IT jobs Gujarat, Site4People">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
+
+        :root {
+            --primary: #064e3b;
+            /* Deep Capital Green */
+            --secondary: #1e3a8a;
+            /* Corporate Blue */
+            --accent: #10b981;
+            /* Vibrant Green for Growth */
+            --bg-off-white: #f8fafc;
+            --text-dark: #0f172a;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 200px 0 120px;
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(6, 78, 59, 0.8)),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .line {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 20px auto;
+        }
+
+        /* District Features */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .feature-img {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .feature-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border-top: 4px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Form */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--primary);
+            padding: 50px;
+            border-radius: 20px;
+            color: var(--white);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: white;
+            outline: none;
+        }
+
+        option {
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Site4People</a>
+                <div class="nav-links"><a href="#apply">Apply Now</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero visible" style="opacity:1; transform:none;">
+            <div class="container">
+                <span class="badge">Gujarat District Career Portal</span>
+                <h1>Gandhinagar Careers</h1>
+                <p>Opportunities in the Smart City Capital</p>
+            </div>
+        </section>
+
+        <section id="gandhinagar" class="container">
+            <div class="section-title">
+                <h2>Gandhinagar: IT & Admin Hub</h2>
+                <div class="line"></div>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-img">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
+                        alt="Gandhinagar IT Infrastructure">
+                </div>
+                <div class="feature-text">
+                    <h3>The Future of Fintech & Tech</h3>
+                    <p>Gandhinagar is redefining the professional landscape of Gujarat. With **GIFT City** becoming a
+                        global financial beacon and several IT parks hosting multinational corporations, the district is
+                        the top choice for software engineers, finance professionals, and administrative experts.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>GIFT City (Fintech)</h3>
+                    <p>Exclusive roles in Banking, Insurance, and International Finance within India's first smart
+                        tech-district.</p>
+                </div>
+                <div class="card">
+                    <h3>IT & Digital Services</h3>
+                    <p>Massive demand for developers, UI/UX designers, and data analysts in Infocity and local tech
+                        hubs.</p>
+                </div>
+                <div class="card">
+                    <h3>Govt & Public Policy</h3>
+                    <p>Administrative and support roles within the heart of Gujarat's governance and educational
+                        institutions.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="apply" class="container">
+            <div class="form-container">
+                <h2 style="text-align:center; margin-bottom:10px;">Job Application 2026</h2>
+                <p style="text-align:center; opacity:0.8; margin-bottom:30px;">Select your district and upload your
+                    profile</p>
+                <form id="jobForm">
+                    <select required>
+                        <option value="" disabled selected>Select Target District</option>
+                        <option value="gandhinagar">Gandhinagar (IT / Admin / Finance)</option>
+                    </select>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="tel" placeholder="Mobile Number" required>
+                    <textarea rows="4"
+                        placeholder="Mention your expertise (e.g., Software Dev, Dairy Technologist, Admin, Mining Engineer)..."></textarea>
+                    <button type="submit" class="submit-btn">Register Profile →</button>
+                </form>
+                <div id="success-msg"
+                    style="display:none; text-align:center; padding:15px; color:#10b981; background:rgba(16,185,129,0.1); border-radius:6px; margin-top:20px; font-weight:bold; border: 1px solid #10b981;">
+                    Success! Our regional team will be in touch shortly.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Site4People. Empowering the workforce of Gandhinagar, Gujarat.</p>
+    </footer>
+
+    <script>
+        document.getElementById('jobForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('.submit-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Submitting...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                this.reset();
+                this.style.display = 'none';
+                document.getElementById('success-msg').style.display = 'block';
+            }, 1500);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('section:not(.hero)').forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>
