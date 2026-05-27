@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Site4People — Jobs & Vacancies in Kaimur, Bihar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#081c1f;
+--gold:#ffbf69;
+--cream:#f7f3ed;
+--aqua:#57c5b6;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'DM Sans',sans-serif;
+background:var(--bg);
+overflow-x:hidden;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+z-index:999;
+background:rgba(8,28,31,0.45);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:2rem;
+font-family:'Playfair Display',serif;
+font-weight:700;
+color:var(--gold);
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+position:relative;
+font-size:1rem;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:var(--gold);
+transition:0.4s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+position:relative;
+overflow:hidden;
+
+background:
+linear-gradient(
+rgba(5,10,10,0.60),
+rgba(5,10,10,0.72)
+),
+
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop')
+
+center center/cover no-repeat;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+to top,
+#081c1f 0%,
+transparent 55%
+);
+
+z-index:1;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:760px;
+}
+
+.glow{
+position:absolute;
+width:420px;
+height:420px;
+border-radius:50%;
+filter:blur(90px);
+animation:floatGlow 12s infinite alternate ease-in-out;
+z-index:1;
+}
+
+.glow.one{
+top:-100px;
+right:-100px;
+background:rgba(255,191,105,0.14);
+}
+
+.glow.two{
+bottom:-120px;
+left:-80px;
+background:rgba(87,197,182,0.14);
+}
+
+@keyframes floatGlow{
+
+0%{
+transform:translateY(0px) scale(1);
+}
+
+100%{
+transform:translateY(-40px) scale(1.12);
+}
+
+}
+
+.badge{
+display:inline-block;
+padding:12px 24px;
+border-radius:50px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.12);
+backdrop-filter:blur(14px);
+margin-bottom:28px;
+font-size:0.95rem;
+animation:badgeFloat 4s infinite ease-in-out;
+}
+
+@keyframes badgeFloat{
+
+50%{
+transform:translateY(-6px);
+}
+
+}
+
+.hero h1{
+font-size:5rem;
+line-height:1.05;
+margin-bottom:24px;
+font-family:'Playfair Display',serif;
+color:#f7f3ed;
+}
+
+.hero p{
+font-size:1.18rem;
+line-height:1.9;
+color:rgba(247,243,237,0.88);
+margin-bottom:36px;
+max-width:650px;
+}
+
+.hero-btns{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:55px;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.45s;
+}
+
+.btn-primary{
+background:linear-gradient(
+135deg,
+#ffbf69,
+#ffdca8
+);
+
+color:#000;
+
+box-shadow:
+0 10px 30px rgba(255,191,105,0.30);
+}
+
+.btn-primary:hover{
+transform:translateY(-6px);
+}
+
+.btn-secondary{
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.12);
+backdrop-filter:blur(14px);
+color:white;
+}
+
+.btn-secondary:hover{
+transform:translateY(-6px);
+background:rgba(255,255,255,0.12);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.stat-card{
+padding:30px;
+border-radius:28px;
+
+background:rgba(255,255,255,0.08);
+
+border:1px solid rgba(255,255,255,0.10);
+
+backdrop-filter:blur(16px);
+
+box-shadow:
+0 20px 50px rgba(0,0,0,0.30);
+
+transition:0.5s;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+}
+
+.stat-card h2{
+font-size:2.6rem;
+color:#ffbf69;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:1rem;
+color:rgba(255,255,255,0.82);
+}
+
+@media(max-width:950px){
+
+.hero h1{
+font-size:3.6rem;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+@media(max-width:650px){
+
+.hero{
+padding:0 6%;
+}
+
+.hero h1{
+font-size:2.7rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.hero-btns{
+flex-direction:column;
+}
+
+.btn{
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+Site4People
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">Jobs</a>
+<a href="#">Companies</a>
+<a href="#">Apply</a>
+<a href="#">Contact</a>
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<div class="hero-content">
+
+<div class="badge">
+Trusted by 10,000+ Job Seekers
+</div>
+
+<h1>
+Jobs & Vacancies in Kaimur
+</h1>
+
+<p>
+Your Gateway to Careers in Kaimur, Bihar — blending luxury storytelling, immersive visuals, and premium employment experiences together.
+</p>
+
+<div class="hero-btns">
+
+<a href="#" class="btn btn-primary">
+Explore Careers
+</a>
+
+<a href="#" class="btn btn-secondary">
+Apply Now
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2 class="counter" data-target="12000">0</h2>
+<p>Applicants</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="900">0</h2>
+<p>Companies</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="3000">0</h2>
+<p>Opportunities</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const counters=document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+
+const updateCounter=()=>{
+
+const target=+counter.getAttribute('data-target');
+
+const count=+counter.innerText;
+
+const increment=target/100;
+
+if(count<target){
+
+counter.innerText=Math.ceil(count+increment);
+
+setTimeout(updateCounter,25);
+
+}else{
+
+counter.innerText=target.toLocaleString()+"+";
+
+}
+
+}
+
+updateCounter();
+
+});
+
+</script>
+
+</body>
+</html>

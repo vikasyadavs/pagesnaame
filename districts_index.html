@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site4People - Jobs & Vacancies Across India</title>
+    <meta name="description" content="Discover job opportunities and career vacancies in districts across Bihar and Chhattisgarh on Site4People">
+    <meta name="keywords" content="jobs in India, vacancies, employment, career opportunities, Bihar jobs, Chhattisgarh jobs">
+    <meta name="author" content="Site4People">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a3a52;
+            --warm-amber: #D4A574;
+            --off-white: #F8F7F4;
+            --coral: #E8714F;
+            --copper: #B87340;
+            --light-gray: #E8E4DF;
+            --text-dark: #2C2C2C;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--off-white);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(26, 58, 82, 0.1);
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #2a5a7f 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.15), transparent);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--warm-amber), var(--coral));
+            margin: 1rem auto 0;
+        }
+
+        .districts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .state-section {
+            margin-bottom: 5rem;
+        }
+
+        .state-heading {
+            font-size: 1.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--warm-amber);
+            font-weight: 600;
+        }
+
+        .district-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(26, 58, 82, 0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-left: 5px solid var(--warm-amber);
+            display: block;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .district-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(26, 58, 82, 0.15);
+            border-left-color: var(--coral);
+        }
+
+        .district-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .district-state {
+            color: var(--coral);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .district-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--warm-amber);
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .district-card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        footer {
+            background: var(--primary-navy);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(212, 165, 116, 0.3);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(26, 58, 82, 0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--warm-amber);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .districts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Site4People</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Jobs & Vacancies Across India</h1>
+            <p>Discover career opportunities in your district</p>
+        </div>
+    </section>
+
+    <div class="content">
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">57</div>
+                <div class="stat-label">Districts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">States</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Job Seekers</div>
+            </div>
+        </div>
+
+        <!-- Bihar Section -->
+        <div class="state-section">
+            <h2 class="state-heading">Bihar - 36 Districts</h2>
+            <div class="districts-grid">
+                <a href="districts/aurangabad_bihar.html" class="district-card">
+                    <div class="district-name">Aurangabad</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Find jobs in Aurangabad's growing manufacturing and agricultural sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/banka_bihar.html" class="district-card">
+                    <div class="district-name">Banka</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career opportunities in Banka's traditional and emerging industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/begusarai_bihar.html" class="district-card">
+                    <div class="district-name">Begusarai</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Discover vacancies in Begusarai's diverse job market.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/bhagalpur_bihar.html" class="district-card">
+                    <div class="district-name">Bhagalpur</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in silk production, education, and services sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/bhojpur_bihar.html" class="district-card">
+                    <div class="district-name">Bhojpur</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment in agriculture, manufacturing, and small industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/buxar_bihar.html" class="district-card">
+                    <div class="district-name">Buxar</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career paths in Buxar's developing economic sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/darbhanga_bihar.html" class="district-card">
+                    <div class="district-name">Darbhanga</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in education, healthcare, and agricultural processing.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/east-champaran_bihar.html" class="district-card">
+                    <div class="district-name">East Champaran</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment opportunities in East Champaran's rural and urban sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/gaya_bihar.html" class="district-card">
+                    <div class="district-name">Gaya</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Diverse job market in Bihar's historic district.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/gopalganj_bihar.html" class="district-card">
+                    <div class="district-name">Gopalganj</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career opportunities in Gopalganj's growing economy.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/jamui_bihar.html" class="district-card">
+                    <div class="district-name">Jamui</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in mining, agriculture, and local industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/jehanabad_bihar.html" class="district-card">
+                    <div class="district-name">Jehanabad</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment in Jehanabad's traditional and modern sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/kaimur_bihar.html" class="district-card">
+                    <div class="district-name">Kaimur</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career paths in Kaimur's diverse industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/katihar_bihar.html" class="district-card">
+                    <div class="district-name">Katihar</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in agriculture, education, and trade sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/khagaria_bihar.html" class="district-card">
+                    <div class="district-name">Khagaria</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment opportunities in Khagaria's economy.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/kishanganj_bihar.html" class="district-card">
+                    <div class="district-name">Kishanganj</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career opportunities in Kishanganj's diverse sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/lakhisarai_bihar.html" class="district-card">
+                    <div class="district-name">Lakhisarai</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in steel production and related industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/madhepura_bihar.html" class="district-card">
+                    <div class="district-name">Madhepura</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment in agriculture and emerging sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/madhubani_bihar.html" class="district-card">
+                    <div class="district-name">Madhubani</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in agriculture, arts, and education sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/munger_bihar.html" class="district-card">
+                    <div class="district-name">Munger</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career opportunities in Munger's industrial areas.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/muzaffarpur_bihar.html" class="district-card">
+                    <div class="district-name">Muzaffarpur</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in agriculture, trade, and services.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/nalanda_bihar.html" class="district-card">
+                    <div class="district-name">Nalanda</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment in education, agriculture, and tourism.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/nawada_bihar.html" class="district-card">
+                    <div class="district-name">Nawada</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career paths in Nawada's developing sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/patna_bihar.html" class="district-card">
+                    <div class="district-name">Patna</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Abundant job opportunities in Bihar's capital.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/purnia_bihar.html" class="district-card">
+                    <div class="district-name">Purnia</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in agriculture, manufacturing, and services.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/rohtas_bihar.html" class="district-card">
+                    <div class="district-name">Rohtas</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment in industrial and agricultural sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/saharsa_bihar.html" class="district-card">
+                    <div class="district-name">Saharsa</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career opportunities in Saharsa's economy.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/samastipur_bihar.html" class="district-card">
+                    <div class="district-name">Samastipur</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in agriculture, trade, and emerging sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/saran_bihar.html" class="district-card">
+                    <div class="district-name">Saran</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment in agriculture and sugar production.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/sheikhpura_bihar.html" class="district-card">
+                    <div class="district-name">Sheikhpura</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in coal mining and related industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/sheohar_bihar.html" class="district-card">
+                    <div class="district-name">Sheohar</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career opportunities in Sheohar's sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/sitamarhi_bihar.html" class="district-card">
+                    <div class="district-name">Sitamarhi</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in agriculture, education, and services.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/siwan_bihar.html" class="district-card">
+                    <div class="district-name">Siwan</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment opportunities in Siwan's economy.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/supaul_bihar.html" class="district-card">
+                    <div class="district-name">Supaul</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Career paths in Supaul's agricultural sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/vaishali_bihar.html" class="district-card">
+                    <div class="district-name">Vaishali</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Jobs in agriculture, manufacturing, and trade.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/west-champaran_bihar.html" class="district-card">
+                    <div class="district-name">West Champaran</div>
+                    <div class="district-state">Bihar</div>
+                    <div class="district-desc">Employment in agriculture and related sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Chhattisgarh Section -->
+        <div class="state-section">
+            <h2 class="state-heading">Chhattisgarh - 21 Districts</h2>
+            <div class="districts-grid">
+                <a href="districts/balod_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Balod</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Career opportunities in Balod's agricultural and mining sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/baloda-bazar_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Baloda Bazar</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Jobs in agriculture, forestry, and small industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/balrampur-ramanujganj_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Balrampur-Ramanujganj</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Employment in coal mining and related sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/bastar_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Bastar</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Career paths in forestry, agriculture, and tourism.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/bemetara_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Bemetara</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Jobs in agriculture, cement, and related industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/bijapur_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Bijapur</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Employment in forestry and traditional sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/bilaspur_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Bilaspur</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Diverse job market in Chhattisgarh's industrial hub.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/dantewada_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Dantewada</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Career opportunities in Dantewada's economy.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/dhamtari_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Dhamtari</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Jobs in agriculture, forestry, and services.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/durg_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Durg</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Abundant opportunities in Chhattisgarh's industrial district.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/gariaband_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Gariaband</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Career paths in agriculture and forestry sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/gaurela-pendra-marwahi_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Gaurela-Pendra-Marwahi</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Employment in mining and agricultural sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/janjgir-champa_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Janjgir-Champa</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Jobs in mining, agriculture, and manufacturing.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/jashpur_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Jashpur</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Career opportunities in Jashpur's economy.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/kabirdham_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Kabirdham</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Employment in agriculture, forestry, and tourism.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/kanker_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Kanker</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Jobs in forestry and traditional sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/khairagarh-chhuikhadan-gandai_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Khairagarh-Chhuikhadan-Gandai</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Career paths in local and emerging industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/kondagaon_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Kondagaon</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Employment opportunities in Kondagaon's sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/korba_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Korba</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Jobs in power generation and related industries.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/korea_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Korea</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Career opportunities in Korea's economy.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+                <a href="districts/mahasamund_chhattisgarh.html" class="district-card">
+                    <div class="district-name">Mahasamund</div>
+                    <div class="district-state">Chhattisgarh</div>
+                    <div class="district-desc">Employment in agriculture and related sectors.</div>
+                    <div class="arrow">Explore →</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-size: 1.3rem; font-weight: 700;">Site4People</p>
+            <p>Your Gateway to Careers Across India</p>
+            <div class="copyright">
+                <p>&copy; 2025 Site4People. All rights reserved. | Empowering careers across India.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
