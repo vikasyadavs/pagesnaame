@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakinada Jobs & Vacancies 2026 | Site4People</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary: #0a2e29;
+            --accent: #d4af37;
+            --bg-light: #fdfcf8;
+            --text-dark: #1a1a1a;
+            --white: #ffffff;
+            --gray: #666666;
+            --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: var(--transition);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(253, 252, 248, 0.9);
+            backdrop-filter: blur(15px);
+            padding: 1rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            background: linear-gradient(rgba(10, 46, 41, 0.75), rgba(10, 46, 41, 0.75)),
+                url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            padding: 0 8%;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Grid Layouts */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        /* Vacancy Styling */
+        .v-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .v-img-container {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .v-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.8s;
+        }
+
+        .v-card:hover .v-img {
+            transform: scale(1.1);
+        }
+
+        .v-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .v-content {
+            padding: 1.5rem;
+        }
+
+        .v-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .v-details {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        /* Buttons */
+        .submit-btn {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .submit-btn:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .v-apply-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .v-apply-btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        /* Form Styling */
+        .form-section {
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 30px;
+            padding: 60px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        footer {
+            background: #051a17;
+            color: white;
+            padding: 50px 8%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">Site4People</a>
+        <ul class="nav-links">
+            <li><a href="#history">History</a></li>
+            <li><a href="#vacancies">Vacancies</a></li>
+            <li><a href="#apply">Apply</a></li>
+        </ul>
+    </header>
+
+    <div class="hero">
+        <h1>Careers in Kakinada 2026</h1>
+        <p>Connecting the brightest minds with Andhra's Energy, Maritime & IT Hub.</p>
+        <a href="#vacancies" class="submit-btn" style="text-decoration: none;">View Latest Jobs</a>
+    </div>
+
+    <!-- Section: Industrial History -->
+    <section id="history" class="reveal">
+        <div class="section-header">
+            <h2>Industrial Legacy</h2>
+        </div>
+        <div class="grid-cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1524522173746-f628baad3644?auto=format&fit=crop&q=80&w=600"
+                    class="card-img-top" alt="Port">
+                <div class="card-content">
+                    <h3>Deep Water Port</h3>
+                    <p>Strategic maritime gateway driving export-import growth for the entire state.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=600"
+                    class="card-img-top" alt="Industry">
+                <div class="card-content">
+                    <h3>Natural Gas Hub</h3>
+                    <p>Center of India's energy security with major KG Basin offshore operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: JOB VACANCIES (Photos Added Here) -->
+    <section id="vacancies" class="reveal" style="background: #f4f7f6;">
+        <div class="section-header">
+            <h2>Current Vacancies</h2>
+            <p>Handpicked opportunities from top employers in Kakinada</p>
+        </div>
+        <div class="grid-cards">
+
+            <!-- Job 1: IT -->
+            <div class="v-card">
+                <div class="v-img-container">
+                    <span class="v-tag">Full Time</span>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600"
+                        class="v-img" alt="Software Engineer">
+                </div>
+                <div class="v-content">
+                    <h3>Full Stack Developer</h3>
+                    <div class="v-details">
+                        <span>📍 Kakinada IT Park</span>
+                        <span>💰 ₹8,00,000 - ₹12,00,000 PA</span>
+                        <span>⏳ 2-4 Years Exp.</span>
+                    </div>
+                    <button class="v-apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- Job 2: Engineering/Oil & Gas -->
+            <div class="v-card">
+                <div class="v-img-container">
+                    <span class="v-tag">Urgent</span>
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=600"
+                        class="v-img" alt="Safety Engineer">
+                </div>
+                <div class="v-content">
+                    <h3>HSE Safety Officer</h3>
+                    <div class="v-details">
+                        <span>📍 KG-Basin Offshore Site</span>
+                        <span>💰 ₹10,00,000 - ₹15,00,000 PA</span>
+                        <span>⏳ 5+ Years Exp.</span>
+                    </div>
+                    <button class="v-apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- Job 3: Logistics/Port -->
+            <div class="v-card">
+                <div class="v-img-container">
+                    <span class="v-tag">Active</span>
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=600"
+                        class="v-img" alt="Port Operations">
+                </div>
+                <div class="v-content">
+                    <h3>Logistics Manager</h3>
+                    <div class="v-details">
+                        <span>📍 Kakinada Deep Water Port</span>
+                        <span>💰 ₹6,50,000 - ₹9,00,000 PA</span>
+                        <span>⏳ 3-5 Years Exp.</span>
+                    </div>
+                    <button class="v-apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- Job 4: Healthcare -->
+            <div class="v-card">
+                <div class="v-img-container">
+                    <span class="v-tag">New</span>
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600"
+                        class="v-img" alt="Healthcare Nurse">
+                </div>
+                <div class="v-content">
+                    <h3>Senior Staff Nurse</h3>
+                    <div class="v-details">
+                        <span>📍 Apollo Hospitals, Kakinada</span>
+                        <span>💰 ₹35,000 - ₹50,000 PM</span>
+                        <span>⏳ 1-3 Years Exp.</span>
+                    </div>
+                    <button class="v-apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section: Apply -->
+    <section class="reveal" id="apply">
+        <div class="form-section">
+            <h2 style="color: white; text-align: center; margin-bottom: 20px;">Send Your Profile</h2>
+            <p style="text-align: center; margin-bottom: 40px; opacity: 0.8;">Don't see a fit? Send us your CV and we'll
+                notify you of future matches.</p>
+            <form id="jobForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <textarea placeholder="Tell us about your experience..." rows="4"></textarea>
+                <div style="text-align: center;">
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Site4People Kakinada. Port City Career Portal.</p>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Form Submit simple alert
+        document.getElementById('jobForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Application submitted successfully!');
+        });
+    </script>
+
+</body>
+
+</html>
