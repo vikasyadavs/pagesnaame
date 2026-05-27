@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirang Jobs & Vacancies 2026 | Site4People</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Find the latest jobs, vacancies, and career opportunities in Chirang, Assam. Explore top companies and apply directly on Site4People.">
+    <meta name="keywords" content="Chirang jobs, vacancies in Chirang, Assam employment, Kajalgaon jobs">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap');
+
+        :root {
+            --primary: #0a2e2a;
+            /* Deep Forest Green */
+            --accent: #d4af37;
+            /* Warm Gold */
+            --bg: #fdfcf8;
+            /* Off-white Editorial */
+            --text: #2d2d2d;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(253, 252, 248, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO PHOTO: Using a lush landscape to represent Assam's beauty */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            background: linear-gradient(rgba(10, 46, 42, 0.6), rgba(10, 46, 42, 0.6)),
+                url('https://images.unsplash.com/photo-1623055990264-909772291583?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 80px 10%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        /* HISTORY PHOTO: Representing the tea gardens/agrarian culture */
+        .history-visual {
+            width: 100%;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .history-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .history-card {
+            background: var(--white);
+            padding: 2rem;
+            border-bottom: 4px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        /* MARKET PHOTOS: Using specific industry icons */
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .market-card {
+            background: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .market-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .market-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--accent);
+        }
+
+        .demand-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            margin: 15px 0 5px;
+            overflow: hidden;
+        }
+
+        .demand-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .company-card {
+            display: flex;
+            align-items: center;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .logo-box {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        /* FORM PHOTO: A professional workspace background */
+        #apply {
+            background: linear-gradient(rgba(253, 252, 248, 0.9), rgba(253, 252, 248, 0.9)),
+                url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .apply-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        footer {
+            background: var(--primary);
+            color: #bdc3c7;
+            padding: 60px 10% 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">Site4People</a>
+        <nav class="nav-links">
+            <a href="#history">History</a>
+            <a href="#market">Market</a>
+            <a href="#apply">Apply Now</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <span class="badge">Local Opportunities Await</span>
+        <h1>Jobs & Vacancies in Chirang</h1>
+        <p>Your Gateway to Careers in Chirang, Assam. Explore opportunities in the land of beauty and industrial growth.
+        </p>
+        <a href="#apply" class="submit-btn" style="width: auto; padding: 15px 40px; text-decoration: none;">Apply Today
+            →</a>
+    </div>
+
+    <section id="history">
+        <div class="section-title">
+            <h2>The Economic Legacy of Chirang</h2>
+            <p>From traditional roots to modern industrial hubs.</p>
+        </div>
+        <div class="history-visual">
+            <!-- PHOTO: Lush Assam Greenery -->
+            <img src="https://images.unsplash.com/photo-1597485356708-013628399587?q=80&w=1200&auto=format&fit=crop"
+                alt="Assam Heritage">
+        </div>
+        <div class="history-grid">
+            <div class="history-card">
+                <h3>Agrarian Heritage</h3>
+                <p>Focus on high-quality paddy, mustard, and organic farming by the Bodo community.</p>
+            </div>
+            <div class="history-card">
+                <h3>Refinery Hub</h3>
+                <p>Industrial growth via the Bongaigaon Refinery (BGR) bringing technical roles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="market" style="background: #f8f7f2;">
+        <div class="section-title">
+            <h2>Current Job Market</h2>
+            <p>High-demand sectors for 2026.</p>
+        </div>
+        <div class="market-grid">
+            <div class="market-card">
+                <!-- PHOTO: Engineering/Manufacturing -->
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=200&auto=format&fit=crop"
+                    class="market-img" alt="Manufacturing">
+                <h4>Manufacturing</h4>
+                <div class="demand-bar">
+                    <div class="demand-fill" style="width: 90%;"></div>
+                </div>
+                <small>High Demand</small>
+            </div>
+            <div class="market-card">
+                <!-- PHOTO: Medical/Healthcare -->
+                <img src="https://images.unsplash.com/photo-1505751172107-1647463f27f8?q=80&w=200&auto=format&fit=crop"
+                    class="market-img" alt="Healthcare">
+                <h4>Healthcare</h4>
+                <div class="demand-bar">
+                    <div class="demand-fill" style="width: 75%;"></div>
+                </div>
+                <small>Growing</small>
+            </div>
+            <div class="market-card">
+                <!-- PHOTO: Education/Teaching -->
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=200&auto=format&fit=crop"
+                    class="market-img" alt="Education">
+                <h4>Education</h4>
+                <div class="demand-bar">
+                    <div class="demand-fill" style="width: 80%;"></div>
+                </div>
+                <small>Stable</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply">
+        <div class="apply-container">
+            <div class="section-title">
+                <h2>Apply Now</h2>
+                <p>Send us your profile to get shortlisted.</p>
+            </div>
+            <form id="jobForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="phone" placeholder="10 digit number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label>Tell Us About Yourself</label>
+                    <textarea id="bio" rows="4" placeholder="Experience and skills..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send My Profile →</button>
+            </form>
+            <div id="successMessage"
+                style="display: none; text-align: center; padding: 20px; color: green; font-weight: bold;">
+                Profile Submitted Successfully! 🎉
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Site4People Chirang</strong></p>
+        <p style="margin-top: 20px; font-size: 0.8rem;">&copy; 2026 Site4People. Empowering Assam Careers.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+        document.getElementById('jobForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
